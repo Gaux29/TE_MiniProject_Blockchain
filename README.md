@@ -1,6 +1,7 @@
-# Sample Hardhat Project
+# Certificate Verification using Blockchain Technology
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+This project intends to implement a system that eliminates the need for people to approach the certificate issuing body to get their certificates verified.
+The project uses blockchain technology in order to safely store a record of the certificate, for the recruiters and other educational institution to check its authenticity.
 
 Try running some of the following tasks:
 
