@@ -6,9 +6,8 @@ The project uses blockchain technology in order to safely store a record of the 
 Try running some of the following tasks:
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
+npm init
+npx hardhat
+npx hardhat compile
+npx hardhat run ./scripts/deploy.js --network localhost
 ```
