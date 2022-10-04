@@ -4,6 +4,7 @@ pragma solidity ^0.8.9;
 contract Certificate {
     string file_name;
     string hash_of_file;
+    string file_description;
     string file_type;
     uint file_size; // size of file in bytes
     uint timestamp_of_upload; // timestamp of when file was uploaded
@@ -34,6 +35,7 @@ contract Certificate {
         timestamp_of_upload = _uint_value_arr[1];
         hash_of_file = _string_value_arr[1];
         file_type = _string_value_arr[2];
+        file_description = _string_value_arr[5];
 
         verifier = Verifier(
             _string_value_arr[3],
@@ -75,7 +77,8 @@ contract Certificate {
             uint _timestamp,
             string memory _verifier_name,
             uint _verifier_phno,
-            string memory _verifier_email
+            string memory _verifier_email,
+            string memory file_description
         )
     {
         // string[] has file string attr, uint[] has file uint attr...
@@ -88,7 +91,8 @@ contract Certificate {
             timestamp_of_upload,
             verifier.verifier_name,
             verifier.verifier_phoneNo,
-            verifier.verifier_email
+            verifier.verifier_email,
+            file_description
         );
     }
 }

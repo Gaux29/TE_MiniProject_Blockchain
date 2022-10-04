@@ -12,6 +12,7 @@ contract Factory {
     function createCertificateContract(
         string memory _file_name,
         string memory _hash,
+        string memory _file_description,
         string memory _type,
         uint _file_size,
         uint _timestamp,
@@ -24,6 +25,7 @@ contract Factory {
         string_value_arr.push(_type);
         string_value_arr.push(_verifier_name);
         string_value_arr.push(_verifier_email);
+        string_value_arr.push(_file_description);
 
         uint_value_arr.push(_file_size);
         uint_value_arr.push(_timestamp);
@@ -58,7 +60,8 @@ contract Factory {
             uint _timestamp,
             string memory _verifier_name,
             uint _verifier_phno,
-            string memory _verifier_email
+            string memory _verifier_email,
+            string memory _file_description
         )
     {
         return
